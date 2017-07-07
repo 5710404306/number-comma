@@ -1,0 +1,24 @@
+
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <div class="container-fluid content">
+      <div class="row">
+          <h1>Exercise #2</h1>
+          
+            <div class="row">
+              <label class="control-label">input number with comma</label>
+            </div>
+            <br>
+            <div class="row">
+              <input (keypress)="onlyNumberKey($event)"  type="text" [(ngModel)]="number" (ngModelChange)="addCommasevent()" (focus)="removeCommas(number)" (blur)="addCommas(number)" />
+              <br>
+            </div>
+            <br>
+            <div>Number of focus : {{showNumberFocus(number)}}</div>
+            <div>Number of blur : {{showNumberBlur(number)}}</div>
+            <number-com [num]="showNumberFocus(number)"></number-com>
+      </div>
+  </div>
+</div>
+
+
